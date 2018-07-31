@@ -1,0 +1,138 @@
+function prefix_customizer_register( $wp_customize ) {
+
+	$wp_customize->add_panel( 'panel_id', array(
+	    'priority' => 10,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => __( 'Configuration header', 'vancances' ),
+	    'description' => __( 'Configuration dynamique de votre header', 'vancances' ),
+	) );
+
+	$wp_customize->add_section( 'section_id', array(
+	    'priority' => 10,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => __( 'Voire les différentes option', 'vancances' ),
+	    'description' => '',
+	    'panel' => 'panel_id',
+	) );
+
+	$wp_customize->add_setting( 'text_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+	) );
+
+	$wp_customize->add_control( 'text_field_id', array(
+	    'type' => 'text',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'Votre slogant', 'vancances' ),
+	    'description' => 'Emplacement du text N°& DE LA CROISIERE A MADAGASCAR',
+	) );
+	
+	$wp_customize->add_setting( 'text_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+	) );
+
+	$wp_customize->add_control( 'text_field_id', array(
+	    'type' => 'text',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'Votre slogant', 'vancances' ),
+	    'description' => 'Emplacement du text N°& DE LA CROISIERE A MADAGASCAR',
+	) );
+
+	// $wp_customize->add_setting( 'email_field_id', array(
+	// 	'default' => '',
+	// 	'type' => 'theme_mod',
+	// 	'capability' => 'edit_theme_options',
+	// 	'transport' => '',
+	// 	'sanitize_callback' => 'sanitize_email',
+	// ) );
+
+	// $wp_customize->add_control( 'email_field_id', array(
+	//     'type' => 'email',
+	//     'priority' => 10,
+	//     'section' => 'section_id',
+	//     'label' => __( 'Email Field', 'textdomain' ),
+	//     'description' => '',
+	// ) );
+
+	// $wp_customize->add_setting( 'password_field_id', array(
+	// 	'default' => '',
+	// 	'type' => 'theme_mod',
+	// 	'capability' => 'edit_theme_options',
+	// 	'transport' => '',
+	// 	'sanitize_callback' => 'sanitize_text_field',
+	// ) );
+
+	// $wp_customize->add_control( 'password_field_id', array(
+	//     'type' => 'password',
+	//     'priority' => 10,
+	//     'section' => 'section_id',
+	//     'label' => __( 'Password Field', 'textdomain' ),
+	//     'description' => '',
+	// ) );
+
+	// $wp_customize->add_setting( 'textarea_field_id', array(
+	// 	'default' => '',
+	// 	'type' => 'theme_mod',
+	// 	'capability' => 'edit_theme_options',
+	// 	'transport' => '',
+	// 	'sanitize_callback' => 'esc_textarea',
+	// ) );
+
+	// $wp_customize->add_control( 'textarea_field_id', array(
+	//     'type' => 'textarea',
+	//     'priority' => 10,
+	//     'section' => 'section_id',
+	//     'label' => __( 'Textarea Field', 'textdomain' ),
+	//     'description' => '',
+	// ) );
+
+	// $wp_customize->add_setting( 'date_field_id', array(
+	// 	'default' => '',
+	// 	'type' => 'theme_mod',
+	// 	'capability' => 'edit_theme_options',
+	// 	'transport' => '',
+	// 	'sanitize_callback' => ''
+	// ) );
+
+	// $wp_customize->add_control( 'date_field_id', array(
+	//     'type' => 'date',
+	//     'priority' => 10,
+	//     'section' => 'section_id',
+	//     'label' => __( 'Date Field', 'textdomain' ),
+	//     'description' => '',
+	// ) );
+
+	// $wp_customize->add_setting( 'range_field_id', array(
+	// 	'default' => '',
+	// 	'type' => 'theme_mod',
+	// 	'capability' => 'edit_theme_options',
+	// 	'transport' => '',
+	// 	'sanitize_callback' => 'intval',
+	// ) );
+
+	// $wp_customize->add_control( 'range_field_id', array(
+	//     'type' => 'range',
+	//     'priority' => 10,
+	//     'section' => 'section_id',
+	//     'label' => __( 'Range Field', 'textdomain' ),
+	//     'description' => '',
+	//     'input_attrs' => array(
+	//         'min' => 0,
+	//         'max' => 100,
+	//         'step' => 1,
+	//         'class' => 'example-class',
+	//         'style' => 'color: #0a0',
+	//     ),
+	// ) );
+
+}
+add_action( 'customize_register', 'prefix_customizer_register' );

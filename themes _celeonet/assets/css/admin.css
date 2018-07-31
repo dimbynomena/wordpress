@@ -1,0 +1,49 @@
+#wp-admin-bar-about{
+	display: none !important;
+}
+#wp-admin-bar-wporg{
+	display: none !important;
+}
+#wp-admin-bar-documentation{
+	display: none !important;
+}
+#wp-admin-bar-support-forums{
+	display: none !important;
+}
+#wp-admin-bar-feedback{
+	display: none !important;
+}
+#contextual-help-link-wrap{
+	display: none !important;
+}
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+background-image: url(custom-logo.png) !important;
+background-position: 0 0;
+color:rgba(0, 0, 0, 0);
+background-size: 100%;
+}
+#wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+background-position: 0 0;
+}
+/*iframe, img {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}*/
+#dashboard-widgets .postbox .inside {
+    margin-bottom: 0;
+    height: 291px;
+}
+
+#menu-comments{
+  display: none !important;
+}
+#toplevel_page_admin-dashboard{
+	display: none !important;
+}
+#toplevel_page_current-user{
+	display: none !important;
+}
+#menu-tools{
+	display: none !important;
+}
